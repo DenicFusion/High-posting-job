@@ -10,7 +10,7 @@ let db = {
 export async function handler(event, context) {
   if (event.httpMethod === "POST") {
     const body = JSON.parse(event.body);
-    if (body.password !== "your_admin_password") {
+    if (body.password !== "Denic123*") {
       return { statusCode: 403, body: JSON.stringify({ error: "Wrong password" }) };
     }
     db = { ...db, ...body };
